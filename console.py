@@ -332,8 +332,8 @@ class HBNBCommand(Cmd):
             attri_type = type(x)
             if attri_type in (int, float):
                 tokens[3] = attri_type(float(tokens[3]))
-            setattr(storage.all()[[*obj][0]], tokens[2], tokens[3])
-            ostorage.all()[[*obj][0]].save()
+            setattr(obj[[*obj][0]], tokens[2], tokens[3])
+            obj[[*obj][0]].save()
 
 
 if __name__ == '__main__':
