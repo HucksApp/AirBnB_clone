@@ -113,7 +113,8 @@ class HBNBCommand(Cmd):
         def __class_ck() -> bool:
             """class validation (1st Arg)"""
 
-            test = re.fullmatch(is_id, toks[0])
+            if toks:
+                test = re.fullmatch(is_id, toks[0])
             if not toks or cmds[cm]['argc'] >= 1 and test:
                 print("** class name missing **")
                 return False
