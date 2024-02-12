@@ -153,7 +153,7 @@ class HBNBCommand(Cmd):
         def __id_ck() -> bool:
             """obj ID validation (2nd Arg)"""
 
-            if len(toks) < 2 or not re.fullmatch(is_id, toks[1]):
+            if len(toks) < 2:
                 print("** instance id missing **")
                 return False
             return True
