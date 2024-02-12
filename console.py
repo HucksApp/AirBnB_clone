@@ -310,7 +310,7 @@ class HBNBCommand(Cmd):
                 elif toks['cmdcm'] == 'self.do_update':
                     attribs = eval(toks['attributes'])
                     for key, value in attribs.items():
-                        eval(toks['cmdcm'])(f"{toks['tokens']} {key} {value}")
+                        eval(toks['cmdcm'])(f"{toks['tokens']} {key} '{value}'")
         else:
             print(f"*** Unknown syntax: {args}")
 
