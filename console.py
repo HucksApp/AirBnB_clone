@@ -121,7 +121,7 @@ class HBNBCommand(Cmd):
             try:
                 eval(toks[0])
             except NameError:
-                print("** class doesn't exist ** ")
+                print("** class doesn't exist **")
                 return False
             return True
 
@@ -145,7 +145,7 @@ class HBNBCommand(Cmd):
             try:
                 eval(toks[0])
             except AttributeError:
-                print("** command not found ** ")
+                print("** command not found **")
                 return False
             return True
 
@@ -161,7 +161,7 @@ class HBNBCommand(Cmd):
             """Object Attribute validation"""
 
             if len(toks) == 2:
-                print("** attribute name missing ** ")
+                print("** attribute name missing **")
                 return False
             if len(toks) == 3:
                 print("** value missing **")
