@@ -47,7 +47,6 @@ class FileStorage:
             for key, value in objs.items():
                 cls = eval(value['__class__'])
                 self.new(cls(**value))
-                #self.__objects.update({key: cls(**value)})
 
         except FileNotFoundError:
             pass
