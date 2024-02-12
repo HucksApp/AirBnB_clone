@@ -169,11 +169,13 @@ class HBNBCommand(Cmd):
                 msg = "< __class__ > has no attribute"
                 print(f"** [{toks[0]}] {msg} {toks[2]} **")
                 return False
+            '''
             if toks[2] in ("id", "created_at", "updated_at"):
                 msg = "<__class__> not allowed"
                 print(f"** update {toks[2]} on [{toks[0]}] {msg} !! **")
                 return False
             return True
+            '''
 
         checks.update({'class': __class_ck, 'id': __id_ck,
                        'instance': __instance_ck, 'attribute': __attribute_ck,
