@@ -304,12 +304,13 @@ class HBNBCommand(Cmd):
         dot_func = r'^[A-Z]\w+\.\w+\(.*\)'
         if re.fullmatch(dot_func, args):
             toks = self.__parserDotFn(args)
-            if toks['cmdcm'] != 'self.do_update':
-                eval(toks['cmdcm'])(toks['tokens'])
-            elif toks['cmdcm'] == 'self.do_update':
-                attribs = eval(toks['attributes'])
-                for key, value in attribs.items():
-                    eval(toks['cmdcm'])(f"{toks['tokens']} {key} {value}")
+            if toks:
+                if toks['cmdcm'] != 'self.do_update':
+                    eval(toks['cmdcm'])(toks['tokens'])
+                elif toks['cmdcm'] == 'self.do_update':
+                    attribs = eval(toks['attributes'])
+                    for key, value in attribs.items():
+                        eval(toks['cmdcm'])(f"{toks['tokens']} {key} {value}")
         else:
             print(f"*** Unknown syntax: {args}")
 
