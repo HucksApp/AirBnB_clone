@@ -74,6 +74,9 @@ class HBNBCommand(Cmd):
             if mid:
                 index = mid.span()
                 arg_id = args[index[0]:index[1]]
+            elif args and not mid:
+                print("** no instance found **")
+                return None
             if arg_id:
                 id_toks = ['plc_hold', arg_id.strip(" ")]
                 chks = self.__console_utility('doto', id_toks)
