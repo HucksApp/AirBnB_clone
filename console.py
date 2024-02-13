@@ -89,8 +89,12 @@ class HBNBCommand(Cmd):
             is_dictArgs = re.search(r'\{.*\}',  args)
             if is_dictArgs:
                 m = is_dictArgs.span()
+                ret.update({"attributes": eval(args[m[0]: m[1]])})
+            elif not is_dictArgs:
+                p_toks = args.split(",")
+                if len(p_toks) == 3:
+                    ret.update({'attributes':{p_toks[1]: p_toks[2]}})
 
-                ret.update({"attributes": args[m[0]: m[1]]})
             ret.update({"tokens": tokens})
         return ret
 
@@ -313,7 +317,9 @@ class HBNBCommand(Cmd):
                     eval(toks['cmdcm'])(toks['tokens'])
                 elif toks['cmdcm'] == 'self.do_update':
                     attribs = eval(toks['attributes'])
-                    for key, value in attribs.items():
+                    for key, value in toks['attributes'].items():
+                        for x in ("'", "\\", '"'):
+                            value = value.replace(x, "").strip(" ")
                         eval(toks['cmdcm'])(f"{toks['tokens']} {key} '{value}'")
         else:
             print(f"*** Unknown syntax: {args}")
