@@ -20,6 +20,7 @@ from models.review import Review
 
 
 class TestFileStorage_dataModel(unittest.TestCase):
+    """Unittests for testing data model of FileStorage class."""
 
     def test_FileStorage_error_dataType(self):
         with self.assertRaises(TypeError):
