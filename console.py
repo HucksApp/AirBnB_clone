@@ -174,12 +174,12 @@ class HBNBCommand(Cmd):
             if len(toks) == 3:
                 print("** value missing **")
                 return False
-
+            """
             if toks[2] not in dir(eval(toks[0])):
                 msg = "< __class__ > has no attribute"
                 print(f"** [{toks[0]}] {msg} {toks[2]} **")
                 return False
-
+            """
             if toks[2] in ("id", "created_at", "updated_at"):
                 msg = "<__class__> not allowed"
                 print(f"** update {toks[2]} on [{toks[0]}] {msg} !! **")
@@ -340,8 +340,12 @@ class HBNBCommand(Cmd):
             if not is_valid_arg:
                 break
         if is_valid_arg:
-            x = getattr(obj[[*obj][0]], tokens[2])
-            attri_type = type(x)
+            attri_type = int
+            try:
+                x = getattr(obj[[*obj][0]], tokens[2])
+                attri_type = type(x)
+            except AttributeError:
+                pass
             if attri_type in (int, float):
                 tokens[3] = attri_type(float(tokens[3]))
             setattr(obj[[*obj][0]], tokens[2], tokens[3])
