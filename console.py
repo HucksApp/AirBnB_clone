@@ -317,8 +317,9 @@ class HBNBCommand(Cmd):
                     eval(toks['cmdcm'])(toks['tokens'])
                 elif toks['cmdcm'] == 'self.do_update':
                     for key, value in toks['attributes'].items():
-                        for x in ("'", "\\", '"'):
-                            value = value.replace(x, "").strip(" ")
+                        if type(value) is str:
+                            for x in ("'", "\\", '"'):
+                                value = value.replace(x, "").strip(" ")
                         arg = f"{toks['tokens']} {key} '{value}'"
                         eval(toks['cmdcm'])(arg)
         else:
