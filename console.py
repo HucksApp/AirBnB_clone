@@ -324,7 +324,7 @@ class HBNBCommand(Cmd):
                         arg = f"{toks['tokens']} {key} '{value}'"
                         eval(toks['cmdcm'])(arg)
         else:
-            print(f"*** Unknown syntax: {args}")
+            print(f"*** Unknown syntax: {args} ***")
 
     def do_update(self, args):
         """Usage: update <class> <id> <attribute_name> <attribute_value> or
