@@ -71,6 +71,9 @@ class TestFileStorage_methods(unittest.TestCase):
             models.storage.save(None)
             models.storage.reload(None)
 
+    def test_reload_with_arg(self):
+        with self.assertRaises(TypeError):
+            models.storage.reload(None
 
     def test_FileStorage_method_errorDataTypeB(self):
         with self.assertRaises(AttributeError):
