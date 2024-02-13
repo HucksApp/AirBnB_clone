@@ -93,7 +93,7 @@ class HBNBCommand(Cmd):
             elif not is_dictArgs:
                 p_toks = args.split(",")
                 if len(p_toks) == 3:
-                    ret.update({'attributes':{p_toks[1]: p_toks[2]}})
+                    ret.update({'attributes': {p_toks[1]: p_toks[2]}})
 
             ret.update({"tokens": tokens})
         return ret
@@ -319,7 +319,8 @@ class HBNBCommand(Cmd):
                     for key, value in toks['attributes'].items():
                         for x in ("'", "\\", '"'):
                             value = value.replace(x, "").strip(" ")
-                        eval(toks['cmdcm'])(f"{toks['tokens']} {key} '{value}'")
+                        arg = f"{toks['tokens']} {key} '{value}'"
+                        eval(toks['cmdcm'])(arg)
         else:
             print(f"*** Unknown syntax: {args}")
 
