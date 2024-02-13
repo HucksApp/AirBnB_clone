@@ -340,7 +340,7 @@ class HBNBCommand(Cmd):
             if not is_valid_arg:
                 break
         if is_valid_arg:
-            attri_type = int
+            attri_type = str
             try:
                 x = getattr(obj[[*obj][0]], tokens[2])
                 attri_type = type(x)
