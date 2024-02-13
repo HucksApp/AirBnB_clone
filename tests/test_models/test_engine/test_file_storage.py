@@ -75,6 +75,9 @@ class TestFileStorage_methods(unittest.TestCase):
         with self.assertRaises(AttributeError):
             models.storage.new(None)
 
+    def test_reload_with_arg(self):
+        with self.assertRaises(TypeError):
+            models.storage.reload(None)
 
     def test_all(self):
         self.assertEqual(dict, type(models.storage.all()))
@@ -103,10 +106,6 @@ class TestFileStorage_methods(unittest.TestCase):
         objs = FileStorage._FileStorage__objects
         for obj in test_obj:
             self.assertIn(f'{obj.__class__.__name__}.' + obj.id, objs)
-
-    def test_reload_with_arg(self):
-        with self.assertRaises(TypeError):
-            models.storage.reload(None)
 
 
     def test_new(self):
