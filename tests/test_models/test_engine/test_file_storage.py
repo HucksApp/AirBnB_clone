@@ -101,7 +101,7 @@ class TestFileStorage_methods(unittest.TestCase):
             obj = x()
             models.storage.new(obj)
             test_obj.append(obj)
-        models.storage.save()
+            obj.save()
         models.storage.reload()
         objs = FileStorage._FileStorage__objects
         for obj in test_obj:
