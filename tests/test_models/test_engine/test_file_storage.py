@@ -69,7 +69,6 @@ class TestFileStorage_methods(unittest.TestCase):
             models.storage.all(None)
             models.storage.new(BaseModel(), 1)
             models.storage.save(None)
-            models.storage.reload(None)
 
     def test_reload_with_arg(self):
         with self.assertRaises(TypeError):
