@@ -92,7 +92,7 @@ class TestFileStorage_methods(unittest.TestCase):
         for obj in test_obj:
             self.assertIn(f'{obj.__class__.__name__}.' + obj.id,  save_objs)
 
-    def test_reload_on_store(self):
+    def test_reload(self):
         test_obj =[]
         for x in  self.classes:
             obj = x()
@@ -103,6 +103,10 @@ class TestFileStorage_methods(unittest.TestCase):
         objs = FileStorage._FileStorage__objects
         for obj in test_obj:
             self.assertIn(f'{obj.__class__.__name__}.' + obj.id, objs)
+
+    def test_reload_with_arg(self):
+        with self.assertRaises(TypeError):
+            models.storage.reload("mm")
 
 
     def test_new(self):
