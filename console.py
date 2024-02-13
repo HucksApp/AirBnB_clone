@@ -175,6 +175,7 @@ class HBNBCommand(Cmd):
                 print("** value missing **")
                 return False
             """
+            # attributes present in obj creation only
             if toks[2] not in dir(eval(toks[0])):
                 msg = "< __class__ > has no attribute"
                 print(f"** [{toks[0]}] {msg} {toks[2]} **")
