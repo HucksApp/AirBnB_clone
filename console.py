@@ -323,6 +323,13 @@ class HBNBCommand(Cmd):
                                 value = value.replace(x, "").strip(" ")
                         arg = f"{toks['tokens']} {key} '{value}'"
                         eval(toks['cmdcm'])(arg)
+        elif re.fullmatch(r'^\.\w+\(\)', args):
+            cm = args.split("(")[0]
+            cm = cm.strip(" ").strip(".")
+            if cm in ['count', 'all']:
+                eval(f'self.do_{cm}')("")
+            else:
+                print(f"*** Unknown syntax: {args} ***")
         else:
             print(f"*** Unknown syntax: {args} ***")
 
