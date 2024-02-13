@@ -345,7 +345,14 @@ class HBNBCommand(Cmd):
                 x = getattr(obj[[*obj][0]], tokens[2])
                 attri_type = type(x)
             except AttributeError:
-                pass
+                if tokens[3].isdigit():
+                    attri_type = int
+                else:
+                    try:
+                        float(tokens[3])
+                        attri_type = float
+                    except ValueError:
+                        pass
             if attri_type in (int, float):
                 tokens[3] = attri_type(float(tokens[3]))
             setattr(obj[[*obj][0]], tokens[2], tokens[3])
