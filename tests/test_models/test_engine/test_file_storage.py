@@ -69,38 +69,16 @@ class TestFileStorage_methods(unittest.TestCase):
             models.storage.all(None)
             models.storage.new(BaseModel(), 1)
             models.storage.save(None)
-            models.storage.reload(None)
 
     def test_FileStorage_method_errorDataTypeB(self):
         with self.assertRaises(AttributeError):
             models.storage.new(None)
+            
+    def test_reload_with_arg(self):
+        with self.assertRaises(TypeError):
+            models.storage.reload(None)
 
-    def test_reload(self):
-        bm = BaseModel()
-        us = User()
-        st = State()
-        pl = Place()
-        cy = City()
-        am = Amenity()
-        rv = Review()
-        models.storage.new(bm)
-        models.storage.new(us)
-        models.storage.new(st)
-        models.storage.new(pl)
-        models.storage.new(cy)
-        models.storage.new(am)
-        models.storage.new(rv)
-        models.storage.save()
-        models.storage.reload()
-        objs = FileStorage._FileStorage__objects
-        self.assertIn("BaseModel." + bm.id, objs)
-        self.assertIn("User." + us.id, objs)
-        self.assertIn("State." + st.id, objs)
-        self.assertIn("Place." + pl.id, objs)
-        self.assertIn("City." + cy.id, objs)
-        self.assertIn("Amenity." + am.id, objs)
-        self.assertIn("Review." + rv.id, objs)
-    '''
+   
     def test_reload(self):
         test_obj =[]
         for x in  self.classes:
@@ -112,7 +90,6 @@ class TestFileStorage_methods(unittest.TestCase):
         objs = FileStorage._FileStorage__objects
         for obj in test_obj:
             self.assertIn(f'{obj.__class__.__name__}.' + obj.id, objs)
-    '''
     
     def test_all(self):
         self.assertEqual(dict, type(models.storage.all()))
