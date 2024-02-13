@@ -106,7 +106,7 @@ class TestFileStorage_methods(unittest.TestCase):
 
     def test_reload_with_arg(self):
         with self.assertRaises(TypeError):
-            models.storage.reload("mm")
+            models.storage.reload(None)
 
 
     def test_new(self):
