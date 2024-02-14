@@ -17,7 +17,7 @@ Show an object	                                     | `(hbnb) show <class> <id>`
 Destroy an object	                                  | `(hbnb) destroy <class> <id>` or `(hbnb) <class>.destroy(<id>)`
 Count all objects or all instances of a class       | `(hbnb) count ` or `(hbnb) count <class> ` or `(hbnb) <class>.count()` or `(hbnb) .count()`
 Show all objects, or all instances of a class       |	`(hbnb) all` or `(hbnb) all <class>` or `(hbnb) .all()` or `(hbnb) <class>.all()`
-Update an attribute of an object                    |	`(hbnb) update <class> <id> <attribute name> "<attribute value>"` or `(hbnb) <class>.update(<id>, <attribute name>, "<attribute value>")`
+Update attributes or attribute of an object                    |	`(hbnb) update <class> <id> <attribute name> "<attribute value>"` or `(hbnb) <class>.update(<id>, <attribute name>, "<attribute value>")` or `(hbnb) <class>.update(<id>, {"<attribute name>" : "<attribute value>"})`
 
 **Non-interactive mode example**
  ```
