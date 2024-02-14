@@ -30,7 +30,7 @@ Non-interactive mode example
 The folder models contains all the classes used in this project.
 
 ### File	Description	Attributes
---------------------------------------------------------------------------------------------------
+----------------------|---------------------------------------------------------------------------
 **base_model.py**     |	BaseModel class for all the other classes	id, created_at, updated_at.
 **user.py**	          | User class for future user information	*email*, *password*, *first_name*, *last_name*.
 **amenity.py**	       | Amenity class for future amenity information	*name*.
