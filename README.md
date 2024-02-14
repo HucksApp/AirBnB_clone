@@ -1,3 +1,4 @@
+![picture alt]([http://via.placeholder.com/200x150](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T063252Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=ebd4bcd7c4f67a6300a567f43e2ef89361268b0bdfc65d3300438be1449a7e5a) "AirBnB")
 ### Description ##
 This team project is part of the ALX School Full-Stack Software Engineer program. It's the first step towards building a first full web application: an AirBnB clone. This first step consists of a custom command-line interface for data management, and the base classes for the storage of this data. Console commands allow the user to create, update, and destroy objects, as well as manage file storage. Using a system of JSON serialization/deserialization, storage is persistent between sessions.
 
