@@ -16,15 +16,15 @@ The console works both in interactive mode and non-interactive mode, much like a
 Non-interactive mode example
 
 `$ echo "help" | ./console.py`
- 
- ` (hbnb)`
-``
-  `Documented commands (type help <topic>):`
-  `========================================`
-  `EOF  all  count  create  destroy  help  quit  show  update`
-``
-  `(hbnb)`
+ ```
+ (hbnb)
 
+  Documented commands (type help <topic>):
+  ========================================`
+  EOF  all  count  create  destroy  help  quit  show  update
+
+  (hbnb)
+```
 
 ## Models
 The folder models contains all the classes used in this project.
