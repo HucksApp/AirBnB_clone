@@ -329,9 +329,9 @@ class HBNBCommand(Cmd):
             if cm in ['count', 'all']:
                 eval(f'self.do_{cm}')("")
             else:
-                print(f"*** Unknown syntax: {args} ***")
+                print(f"*** Unknown syntax: {args}")
         else:
-            print(f"*** Unknown syntax: {args} ***")
+            print(f"*** Unknown syntax: {args}")
 
     def do_update(self, args):
         """Usage: update <class> <id> <attribute_name> <attribute_value> or
