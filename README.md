@@ -17,13 +17,13 @@ Non-interactive mode example
 
 `$ echo "help" | ./console.py`
  
-  (hbnb)
-
-  Documented commands (type help <topic>):
-  \========================================
-  EOF  all  count  create  destroy  help  quit  show  update
-
-  (hbnb)
+ ` (hbnb)`
+``
+  `Documented commands (type help <topic>):`
+  `========================================`
+  `EOF  all  count  create  destroy  help  quit  show  update`
+``
+  `(hbnb)`
 
 
 ## Models
