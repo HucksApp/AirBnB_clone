@@ -49,14 +49,14 @@ place.py    	         | **Place** class for future accomodation information	    
 review.py   	        | **Review** class for future user/host review information	| *place_id*, *user_id*, *text*.
 
 
-## File storage 📄
+## File storage 📄 🗃
 The folder engine manages the serialization and deserialization of all the data, following a JSON format.
 
 A ***FileStorage*** class is defined in *file_storage.py* with methods to follow this `flow: <object> -> to_dict() -> <dictionary> -> JSON dump -> <json string> -> FILE -> <json string> -> JSON load -> <dictionary> -> <object>`
 
 The *init.py* file contains the instantiation of the *FileStorage* class called storage, followed by a call to the method *reload()* on that instance. This allows the storage to be reloaded automatically at initialization, which recovers the serialized data.
 
-## Tests 🧑🏿‍🔬️
+## Tests 🧑🏿‍🔬️ 🧪
 All the code is tested with the unittest module. The test for the classes are in the test_models folder.
 
 ## Authors
