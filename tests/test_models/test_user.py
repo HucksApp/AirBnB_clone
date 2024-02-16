@@ -29,6 +29,7 @@ class TestUser_dataModel(unittest.TestCase):
         self.assertEqual(str, type(User.email))
         self.assertEqual(str, type(User.first_name))
         self.assertEqual(str, type(User.last_name))
+        self.assertEqual(str, type(User.password))
 
     def test_created_at(self):
         us1 = User()
