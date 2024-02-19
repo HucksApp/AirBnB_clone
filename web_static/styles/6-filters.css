@@ -7,10 +7,13 @@
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
-    display: inline-block;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     height: 70px;
     width: 100%;
   }
+  
   
   /* Search button style */
   .filters button {
@@ -22,9 +25,20 @@
     font-size: 18px;
     height: 48px;
     margin: 12px 30px;
+    margin-left: auto;
     width: 20%;
   }
   
+  .filters div h3, .filters div h4 {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+
+
   /* Search button hover opacity */
   .filters button:hover {
     background-color: rgba(255, 90, 95, .9);
@@ -53,9 +67,10 @@
   /* Locations and amenities popover menu */
   .filters .popover {
     background-color: #fafafa;
-    border: 1px solid #ddd;
     border-radius: 4px;
     display: none;
+    margin: 0;
+    min-height: 70px;
     position: absolute;
     width: 100%;
   }
@@ -64,6 +79,7 @@
   .filters .locations:hover .popover,
   .filters .amenities:hover .popover {
     display: block;
+    border: solid #ddd;
   }
   
   /* Locations list style */

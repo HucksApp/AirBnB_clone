@@ -7,6 +7,9 @@
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     height: 70px;
     width: 100%;
   }
@@ -21,6 +24,7 @@
     font-size: 18px;
     height: 48px;
     margin: 12px 30px;
+    margin-left: auto;
     width: 20%;
   }
   
@@ -32,9 +36,20 @@
   /* Locations and amenities style */
   .locations,
   .amenities {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     height: 100%;
     width: 25%;
+  }
+
+  .filters div h3, .filters div h4 {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   /* Locations border */
