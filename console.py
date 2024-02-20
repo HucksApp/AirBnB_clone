@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines the HBnB console"""
+"""Defines the AirBnB console"""
 
 from cmd import Cmd
 from models.base_model import BaseModel
@@ -15,7 +15,7 @@ import re
 
 
 class HBNBCommand(Cmd):
-    """Defines the HolbertonBnB command interpreter.
+    """Defines the AirBnB command interpreter.
     Attributes:
         prompt (str): The command prompt.
     """
